@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD1D35DC-45BA-4653-AF7A-CF03F8A719D0}</ProjectGuid>
+    <ProjectGuid>{0B2E68EC-C099-401D-B74C-F9BF502C9960}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QLKS</RootNamespace>
