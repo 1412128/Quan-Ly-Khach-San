@@ -17,7 +17,6 @@ namespace QLKS.GUI
         public TrangChu()
         {
             InitializeComponent();           
-        }        
-           
+        }
     }
 }
