@@ -11,11 +11,21 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 14/05/2018 14:18:05
+ Date: 14/05/2018 14:21:11
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for account_nhanvien
+-- ----------------------------
+DROP TABLE IF EXISTS `account_nhanvien`;
+CREATE TABLE `account_nhanvien`  (
+  `IDNhanVien` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `TaiKhoan` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `MatKhau` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for baobieu
