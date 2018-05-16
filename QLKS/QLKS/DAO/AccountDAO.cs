@@ -22,12 +22,12 @@ namespace QLKS.DAO
         }   
         public bool updateAccount(AccountDTO _user)
         {            
-            string query = string.Format("UPDATE account_nhanvien SET MATKHAU ={0} WHERE TaiKhoan ={1}", _user.MatKhau, _user.TaiKhoan);
+            string query = string.Format("UPDATE account_nhanvien SET MATKHAU ='{0}' WHERE TaiKhoan ='{1}'", _user.MatKhau, _user.TaiKhoan);
             return DBConnection.getInstance().Update(query) ? true : false;
         }
         public bool addAccount(AccountDTO _user)
         {
-            string query = string.Format("INSERT INTO account_nhanvien (IDNhanVien, TaiKhoan, MatKhau)  VALUE=({0},{1},{2},{3})", _user.IdNhanVien, _user.TaiKhoan, _user.MatKhau);
+            string query = string.Format("INSERT INTO account_nhanvien (IDNhanVien, TaiKhoan, MatKhau)  VALUES('{0}','{1}','{2}','{3}')", _user.IdNhanVien, _user.TaiKhoan, _user.MatKhau);
             return DBConnection.getInstance().Insert(query) ? true : false;
         }
     }

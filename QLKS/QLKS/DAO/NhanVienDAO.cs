@@ -54,12 +54,12 @@ namespace QLKS.DAO
         }
         public bool ThemThongTinNhanVien(NhanVienDTO _nhanVien)
         {
-            string query = string.Format("INSERT INTO khachhang (IDNhanVien, TenNhanVien, NgaySinh, CMND, ChucVu, Luong) VALUE=({0},{1},{2},{3},{4},{5})", _nhanVien.IdNhanVien, _nhanVien.TenNhanVien, _nhanVien.NgaySinh, _nhanVien.Cmnd, _nhanVien.ChucVu, _nhanVien.Luong);
+            string query = string.Format("INSERT INTO khachhang (IDNhanVien, TenNhanVien, NgaySinh, CMND, ChucVu, Luong) VALUES('{0}','{1}','{2}','{3}','{4}','{5}')", _nhanVien.IdNhanVien, _nhanVien.TenNhanVien, _nhanVien.NgaySinh, _nhanVien.Cmnd, _nhanVien.ChucVu, _nhanVien.Luong);
             return DBConnection.getInstance().Insert(query) ? true : false;
         }
         public bool CapNhatThongTinKhachHang(NhanVienDTO _nhanVien)
         {
-            string query = string.Format("UPDATE khachhang SET TenNhanVien = {0}, NgaySinh = {1}, CMND = {2}, ChucVu = {3}, Luong = {4} WHERE  IDNhanVien= {5}", _nhanVien.TenNhanVien, _nhanVien.NgaySinh, _nhanVien.Cmnd, _nhanVien.ChucVu, _nhanVien.Luong, _nhanVien.IdNhanVien);
+            string query = string.Format("UPDATE khachhang SET TenNhanVien = '{0}', NgaySinh = '{1}', CMND = '{2}', ChucVu = '{3}', Luong = '{4}' WHERE  IDNhanVien= '{5}'", _nhanVien.TenNhanVien, _nhanVien.NgaySinh, _nhanVien.Cmnd, _nhanVien.ChucVu, _nhanVien.Luong, _nhanVien.IdNhanVien);
             return DBConnection.getInstance().Update(query) ? true : false;
         }
     }

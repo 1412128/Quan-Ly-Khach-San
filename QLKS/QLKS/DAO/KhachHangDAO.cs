@@ -54,12 +54,12 @@ namespace QLKS.DAO
         }
         public bool ThemThongTinKhachHang(KhachHangDTO _khachhang)
         {
-            string query = string.Format("INSERT INTO khachhang (IDKhachHang, HoTen, CMND, NgaySinh, SDT) VALUE=({0},{1},{2},{3},{4})",_khachhang.IdKhachHang, _khachhang.HoTen, _khachhang.Cmnd, _khachhang.NgaySinh, _khachhang.Sdt); 
+            string query = string.Format("INSERT INTO khachhang (IDKhachHang, HoTen, CMND, NgaySinh, SDT) VALUES({'0}','{1}','{2}','{3}','{4}')",_khachhang.IdKhachHang, _khachhang.HoTen, _khachhang.Cmnd, _khachhang.NgaySinh, _khachhang.Sdt); 
             return DBConnection.getInstance().Insert(query) ? true : false;
         }
         public bool CapNhatThongTinKhachHang(KhachHangDTO _khachhang)
         {
-            string query = string.Format("UPDATE khachhang SET HoTen = {0}, CMND = {1}, NgaySinh = {2}, SDT = {3} WHERE  IDKhacHang= {4}", _khachhang.HoTen, _khachhang.Cmnd, _khachhang.NgaySinh, _khachhang.Sdt, _khachhang.IdKhachHang);
+            string query = string.Format("UPDATE khachhang SET HoTen = '{0}', CMND = '{1}', NgaySinh = '{2}', SDT = '{3}' WHERE  IDKhacHang= '{4}'", _khachhang.HoTen, _khachhang.Cmnd, _khachhang.NgaySinh, _khachhang.Sdt, _khachhang.IdKhachHang);
             return DBConnection.getInstance().Update(query) ? true : false;
         }
         

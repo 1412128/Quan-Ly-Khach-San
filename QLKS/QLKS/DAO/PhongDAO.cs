@@ -52,12 +52,12 @@ namespace QLKS.DAO
         }
         public bool ThemThongTinPhong(PhongDTO _phong)
         {
-            string query = string.Format("INSERT INTO phong (IDPhong, TenPhong, LoaiPhong, TrangThai, DonGia) VALUE=({0},{1},{2},{3},{4})", _phong.IdPhong, _phong.TenPhong, _phong.LoaiPhong, _phong.TrangThai, _phong.Dongia);
+            string query = string.Format("INSERT INTO phong (IDPhong, TenPhong, LoaiPhong, TrangThai, DonGia) VALUES('{0}','{1}','{2}','{3}','{4}')", _phong.IdPhong, _phong.TenPhong, _phong.LoaiPhong, _phong.TrangThai, _phong.Dongia);
             return DBConnection.getInstance().Insert(query) ? true : false;
         }
         public bool CapNhatThongTinPhong(PhongDTO _phong)
         {
-            string query = string.Format("UPDATE phong SET TenPhong = {0}, LoaiPhong = {1}, TrangThai = {2}, DonGia = {3} WHERE  IDPhong= {5}", _phong.TenPhong, _phong.LoaiPhong, _phong.TrangThai, _phong.Dongia, _phong.IdPhong);
+            string query = string.Format("UPDATE phong SET TenPhong = '{0}', LoaiPhong = '{1}', TrangThai = '{2}', DonGia = '{3}' WHERE  IDPhong= '{4}'", _phong.TenPhong, _phong.LoaiPhong, _phong.TrangThai, _phong.Dongia, _phong.IdPhong);
             return DBConnection.getInstance().Update(query) ? true : false;
         }
     }

@@ -50,12 +50,12 @@ namespace QLKS.DAO
         }
         public bool ThemThongTinDichVu(DichVuDTO _dichvu)
         {
-            string query = string.Format("INSERT INTO dichvu (IDDichVu, TenDichVu, Gia, TinhTrang) VALUE=({0},{1},{2},{3})", _dichvu.IdDichVu, _dichvu.TenDichVu, _dichvu.Gia, _dichvu.TinhTrang);
+            string query = string.Format("INSERT INTO dichvu (IDDichVu, TenDichVu, Gia, TinhTrang) VALUES('{0}','{1}','{2}','{3}')", _dichvu.IdDichVu, _dichvu.TenDichVu, _dichvu.Gia, _dichvu.TinhTrang);
             return DBConnection.getInstance().Insert(query) ? true : false;
         }
         public bool CapNhatThongTinDichVu(DichVuDTO _dichvu)
         {
-            string query = string.Format("UPDATE phong SET TenDichVu = {0}, Gia = {1}, TinhTrang = {2} WHERE  IDDichVu= {4}", _dichvu.TenDichVu, _dichvu.Gia, _dichvu.TinhTrang, _dichvu.IdDichVu);
+            string query = string.Format("UPDATE phong SET TenDichVu = '{0}', Gia = '{1}', TinhTrang = '{2}' WHERE  IDDichVu= '{4}'", _dichvu.TenDichVu, _dichvu.Gia, _dichvu.TinhTrang, _dichvu.IdDichVu);
             return DBConnection.getInstance().Update(query) ? true : false;
         }
     }
