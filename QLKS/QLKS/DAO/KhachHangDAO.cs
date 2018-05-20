@@ -36,7 +36,7 @@ namespace QLKS.DAO
             List<string[]> _list = new List<string[]>();
             KhachHangDTO _data = new KhachHangDTO();
 
-            string query = string.Format("SELECT * FROM khachhang WHERE IDKhachHang={0}",_id);
+            string query = string.Format("SELECT * FROM khachhang WHERE IDKhachHang='{0}'",_id);
             _list = DBConnection.getInstance().Select(query);
 
             _data.IdKhachHang = _list[0][0];
@@ -59,7 +59,8 @@ namespace QLKS.DAO
         }
         public bool CapNhatThongTinKhachHang(KhachHangDTO _khachhang)
         {
-            string query = string.Format("UPDATE khachhang SET HoTen = '{0}', CMND = '{1}', NgaySinh = '{2}', SDT = '{3}' WHERE  IDKhacHang= '{4}'", _khachhang.HoTen, _khachhang.Cmnd, _khachhang.NgaySinh, _khachhang.Sdt, _khachhang.IdKhachHang);
+            string query = string.Format("UPDATE khachhang SET HoTen = '{0}', CMND = '{1}', NgaySinh = '{2}', SDT = '{3}' WHERE  IDKhachHang = '{4}'", _khachhang.HoTen, _khachhang.Cmnd.ToString(), _khachhang.NgaySinh.ToString() , _khachhang.Sdt.ToString(), _khachhang.IdKhachHang);
+
             return DBConnection.getInstance().Update(query) ? true : false;
         }
         

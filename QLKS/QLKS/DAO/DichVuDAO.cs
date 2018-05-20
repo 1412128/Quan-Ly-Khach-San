@@ -33,10 +33,10 @@ namespace QLKS.DAO
             List<string[]> _list = new List<string[]>();
             DichVuDTO _data = new DichVuDTO();
 
-            string query = string.Format("SELECT * FROM dichvu WHERE IDDichVu={0}", _id);
+            string query = string.Format("SELECT * FROM dichvu WHERE IDDichVu='{0}'", _id);
             _list = DBConnection.getInstance().Select(query);
 
-            _data.IdDichVu = _list[0][0];
+            _data.IdDichVu = _list[0][0].ToString();
             _data.TenDichVu = _list[0][1];
             _data.Gia = Int32.Parse(_list[0][2]);
             _data.TinhTrang = _list[0][3];       
@@ -55,7 +55,7 @@ namespace QLKS.DAO
         }
         public bool CapNhatThongTinDichVu(DichVuDTO _dichvu)
         {
-            string query = string.Format("UPDATE phong SET TenDichVu = '{0}', Gia = '{1}', TinhTrang = '{2}' WHERE  IDDichVu= '{4}'", _dichvu.TenDichVu, _dichvu.Gia, _dichvu.TinhTrang, _dichvu.IdDichVu);
+            string query = string.Format("UPDATE dichvu SET TenDichVu = '{0}', Gia = '{1}', TinhTrang = '{2}' WHERE  IDDichVu = '{3}'", _dichvu.TenDichVu, _dichvu.Gia, _dichvu.TinhTrang,  _dichvu.IdDichVu);
             return DBConnection.getInstance().Update(query) ? true : false;
         }
     }

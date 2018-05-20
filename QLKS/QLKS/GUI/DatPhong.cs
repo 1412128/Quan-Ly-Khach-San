@@ -15,6 +15,6 @@ namespace QLKS.GUI
         public DatPhong()
         {
             InitializeComponent();
-        }
+        }    
     }
 }

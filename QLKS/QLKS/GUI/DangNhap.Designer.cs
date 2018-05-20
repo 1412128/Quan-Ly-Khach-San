@@ -31,8 +31,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.metroTextButton1 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.txtTaiKhoan = new MetroFramework.Controls.MetroTextBox();
+            this.txtMatKhau = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
@@ -52,8 +52,8 @@
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.metroTextButton1);
-            this.groupBox1.Controls.Add(this.metroTextBox1);
-            this.groupBox1.Controls.Add(this.metroTextBox2);
+            this.groupBox1.Controls.Add(this.txtTaiKhoan);
+            this.groupBox1.Controls.Add(this.txtMatKhau);
             this.groupBox1.Location = new System.Drawing.Point(-5, 260);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(377, 167);
@@ -82,70 +82,71 @@
             this.metroTextButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroTextButton1.UseSelectable = true;
             this.metroTextButton1.UseVisualStyleBackColor = true;
+            this.metroTextButton1.Click += new System.EventHandler(this.metroTextButton1_Click);
             // 
-            // metroTextBox1
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(193, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.DisplayIcon = true;
-            this.metroTextBox1.Icon = global::QLKS.Properties.Resources.user;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(77, 27);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.Size = new System.Drawing.Size(215, 23);
-            this.metroTextBox1.TabIndex = 0;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMark = "Tên Đăng Nhập";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroTextBox2
+            // txtTaiKhoan
             // 
             // 
             // 
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(193, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.DisplayIcon = true;
-            this.metroTextBox2.Icon = global::QLKS.Properties.Resources.password1;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(77, 70);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '*';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShowButton = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(215, 23);
-            this.metroTextBox2.TabIndex = 1;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMark = "Mật Khẩu";
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTaiKhoan.CustomButton.Image = null;
+            this.txtTaiKhoan.CustomButton.Location = new System.Drawing.Point(193, 1);
+            this.txtTaiKhoan.CustomButton.Name = "";
+            this.txtTaiKhoan.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtTaiKhoan.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTaiKhoan.CustomButton.TabIndex = 1;
+            this.txtTaiKhoan.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTaiKhoan.CustomButton.UseSelectable = true;
+            this.txtTaiKhoan.CustomButton.Visible = false;
+            this.txtTaiKhoan.DisplayIcon = true;
+            this.txtTaiKhoan.Icon = global::QLKS.Properties.Resources.user;
+            this.txtTaiKhoan.Lines = new string[0];
+            this.txtTaiKhoan.Location = new System.Drawing.Point(77, 27);
+            this.txtTaiKhoan.MaxLength = 32767;
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.PasswordChar = '\0';
+            this.txtTaiKhoan.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTaiKhoan.SelectedText = "";
+            this.txtTaiKhoan.SelectionLength = 0;
+            this.txtTaiKhoan.SelectionStart = 0;
+            this.txtTaiKhoan.Size = new System.Drawing.Size(215, 23);
+            this.txtTaiKhoan.TabIndex = 0;
+            this.txtTaiKhoan.UseSelectable = true;
+            this.txtTaiKhoan.WaterMark = "Tên Đăng Nhập";
+            this.txtTaiKhoan.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtTaiKhoan.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtMatKhau
+            // 
+            // 
+            // 
+            // 
+            this.txtMatKhau.CustomButton.Image = null;
+            this.txtMatKhau.CustomButton.Location = new System.Drawing.Point(193, 1);
+            this.txtMatKhau.CustomButton.Name = "";
+            this.txtMatKhau.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtMatKhau.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMatKhau.CustomButton.TabIndex = 1;
+            this.txtMatKhau.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMatKhau.CustomButton.UseSelectable = true;
+            this.txtMatKhau.DisplayIcon = true;
+            this.txtMatKhau.Icon = global::QLKS.Properties.Resources.password1;
+            this.txtMatKhau.Lines = new string[0];
+            this.txtMatKhau.Location = new System.Drawing.Point(77, 70);
+            this.txtMatKhau.MaxLength = 32767;
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMatKhau.SelectedText = "";
+            this.txtMatKhau.SelectionLength = 0;
+            this.txtMatKhau.SelectionStart = 0;
+            this.txtMatKhau.ShowButton = true;
+            this.txtMatKhau.Size = new System.Drawing.Size(215, 23);
+            this.txtMatKhau.TabIndex = 1;
+            this.txtMatKhau.UseSelectable = true;
+            this.txtMatKhau.WaterMark = "Mật Khẩu";
+            this.txtMatKhau.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMatKhau.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel1
             // 
@@ -213,11 +214,12 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(333, 0);
+            this.button3.Location = new System.Drawing.Point(333, 1);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(27, 25);
             this.button3.TabIndex = 31;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox2
             // 
@@ -254,8 +256,8 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox txtTaiKhoan;
+        private MetroFramework.Controls.MetroTextBox txtMatKhau;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroTextBox.MetroTextButton metroTextButton1;
         private MetroFramework.Controls.MetroLabel metroLabel1;

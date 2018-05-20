@@ -11,7 +11,7 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 14/05/2018 14:21:11
+ Date: 20/05/2018 17:40:00
 */
 
 SET NAMES utf8mb4;
@@ -22,10 +22,19 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `account_nhanvien`;
 CREATE TABLE `account_nhanvien`  (
-  `IDNhanVien` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `TaiKhoan` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `MatKhau` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+  `IDTaiKhoan` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `TaiKhoan` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `MatKhau` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  PRIMARY KEY (`IDTaiKhoan`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of account_nhanvien
+-- ----------------------------
+INSERT INTO `account_nhanvien` VALUES ('0', 'nhanvien2', '123');
+INSERT INTO `account_nhanvien` VALUES ('1', 'quanly1', '1');
+INSERT INTO `account_nhanvien` VALUES ('2', 'quanly2', '1');
+INSERT INTO `account_nhanvien` VALUES ('3', 'nhanvien1', '3423453565');
 
 -- ----------------------------
 -- Table structure for baobieu
@@ -35,13 +44,25 @@ CREATE TABLE `baobieu`  (
   `IDBaoBieu` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `IDPhong` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `IDNhanVien` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `CMNDKhachHang` int(9) NOT NULL,
+  `IDKhachHang` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `ThoiGianBatDau` datetime(6) NOT NULL,
   `ThoiGianKetThuc` datetime(6) NOT NULL,
-  `DSDichVu` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `TongTien` float(255, 0) NOT NULL,
-  PRIMARY KEY (`IDBaoBieu`) USING BTREE
+  `DSDichVu` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `TongTien` int(255) NOT NULL,
+  PRIMARY KEY (`IDBaoBieu`) USING BTREE,
+  INDEX `fk_baobieu_dichvu`(`DSDichVu`) USING BTREE,
+  INDEX `fk_baobieu_khachhang`(`IDKhachHang`) USING BTREE,
+  INDEX `fk_baobieu_nhanvien`(`IDNhanVien`) USING BTREE,
+  INDEX `fk_baobieu_phong`(`IDPhong`) USING BTREE,
+  CONSTRAINT `fk_baobieu_khachhang` FOREIGN KEY (`IDKhachHang`) REFERENCES `khachhang` (`IDKhachHang`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_baobieu_nhanvien` FOREIGN KEY (`IDNhanVien`) REFERENCES `nhanvien` (`IDNhanVien`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_baobieu_phong` FOREIGN KEY (`IDPhong`) REFERENCES `phong` (`IDPhong`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of baobieu
+-- ----------------------------
+INSERT INTO `baobieu` VALUES ('0', '0', '1', '0', '2018-01-01 00:00:00.000000', '2018-01-03 00:00:00.000000', '1,0,2', 1000000);
 
 -- ----------------------------
 -- Table structure for dichvu
@@ -56,16 +77,34 @@ CREATE TABLE `dichvu`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
+-- Records of dichvu
+-- ----------------------------
+INSERT INTO `dichvu` VALUES ('0', 'Massage1', 1000000, 'Tạm ngưng dịch vụ');
+INSERT INTO `dichvu` VALUES ('1', 'Thuê Xe Máy', 100000, 'Tạm hết dịch vụ');
+INSERT INTO `dichvu` VALUES ('2', 'Thuê xe đạp', 1000, 'Tạm ngưng dịch vụ');
+
+-- ----------------------------
 -- Table structure for khachhang
 -- ----------------------------
 DROP TABLE IF EXISTS `khachhang`;
 CREATE TABLE `khachhang`  (
+  `IDKhachHang` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `HoTen` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `CMND` int(9) NOT NULL,
-  `NgaySinh` datetime(6) NOT NULL,
+  `NgaySinh` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `SDT` int(11) NOT NULL,
-  PRIMARY KEY (`CMND`) USING BTREE
+  PRIMARY KEY (`IDKhachHang`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of khachhang
+-- ----------------------------
+INSERT INTO `khachhang` VALUES ('0', 'Doan Van Ho', 111111111, '1996-05-05', 12345678);
+INSERT INTO `khachhang` VALUES ('1', 'Nguyen Luu', 2245345, '1997-08-08', 123456789);
+INSERT INTO `khachhang` VALUES ('2', 'Ho Van Cuoi', 333333333, '2000-01-01', 123456789);
+INSERT INTO `khachhang` VALUES ('3', 'Ho Ngoc Ha', 444444444, '2001-08-12', 123456789);
+INSERT INTO `khachhang` VALUES ('4', 'Ngo Viet Cuong', 555555555, '1996-05-05', 123456789);
+INSERT INTO `khachhang` VALUES ('5', 'Van A', 1234, '1996-07-19', 12345678);
 
 -- ----------------------------
 -- Table structure for nhanvien
@@ -75,11 +114,17 @@ CREATE TABLE `nhanvien`  (
   `IDNhanVien` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `TenNhanVien` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `NgaySinh` datetime(6) NOT NULL,
-  `CMND` int(9) NOT NULL,
+  `CMND` int(255) NOT NULL,
   `ChucVu` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `Luong` float(255, 0) NOT NULL,
+  `Luong` int(255) NOT NULL,
   PRIMARY KEY (`IDNhanVien`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of nhanvien
+-- ----------------------------
+INSERT INTO `nhanvien` VALUES ('0', 'Phuo1', '2000-07-11 00:00:00.000000', 123456789, 'Nhan vien', 7000000);
+INSERT INTO `nhanvien` VALUES ('1', 'Nhan Vien', '1991-08-11 00:00:00.000000', 123456789, 'Quan Ly', 1000000);
 
 -- ----------------------------
 -- Table structure for phong
@@ -93,5 +138,52 @@ CREATE TABLE `phong`  (
   `DonGia` float(255, 0) NOT NULL,
   PRIMARY KEY (`IDPhong`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of phong
+-- ----------------------------
+INSERT INTO `phong` VALUES ('0', 'Phòng Vip1', 0, 'Còn Trống', 1000000);
+INSERT INTO `phong` VALUES ('1', 'Phòng Vip2', 0, 'Còn Trống', 1000000);
+INSERT INTO `phong` VALUES ('10', 'Phòng Vip10', 0, 'Đang Bảo Trì', 1000000);
+INSERT INTO `phong` VALUES ('11', 'Phòng Vip11', 0, 'Đang Sử Dụng', 1000000);
+INSERT INTO `phong` VALUES ('12', 'Phòng Vip12', 0, 'Đang Bảo Trì', 1000000);
+INSERT INTO `phong` VALUES ('13', 'Phòng 4 Sao2', 1, 'Còn Trống', 500000);
+INSERT INTO `phong` VALUES ('14', 'Phòng 4 Sao3', 1, 'Còn Trống', 500000);
+INSERT INTO `phong` VALUES ('15', 'Phòng 4 Sao4', 1, 'Còn Trống', 500000);
+INSERT INTO `phong` VALUES ('16', 'Phòng 4 Sao5', 1, 'Đang Bảo Trì', 50000);
+INSERT INTO `phong` VALUES ('17', 'Phòng 4 Sao6', 1, 'Đang Sử Dụng', 500000);
+INSERT INTO `phong` VALUES ('18', 'Phòng 4 Sao7', 1, 'Đang Bảo Trì', 500000);
+INSERT INTO `phong` VALUES ('19', 'Phòng 4 Sao8', 1, 'Đang Sử Dụng', 500000);
+INSERT INTO `phong` VALUES ('2', 'Phòng Vip3', 0, 'Còn Trống', 1000000);
+INSERT INTO `phong` VALUES ('20', 'Phòng 4 Sao9', 1, 'Đang Bảo Trì', 500000);
+INSERT INTO `phong` VALUES ('21', 'Phòng 4 Sao1', 1, 'Đang Bảo Trì', 500000);
+INSERT INTO `phong` VALUES ('22', 'Phòng 3 Sao1', 2, 'Đang Bảo Trì', 300000);
+INSERT INTO `phong` VALUES ('23', 'Phòng 3 Sao2', 2, 'Còn Trống', 300000);
+INSERT INTO `phong` VALUES ('24', 'Phòng 3 Sao3', 2, 'Còn Trống', 300000);
+INSERT INTO `phong` VALUES ('3', 'Phòng Vip3', 0, 'Đang Sử Dụng', 1000000);
+INSERT INTO `phong` VALUES ('4', 'Phòng Vip4', 0, 'Đang Bảo Trì', 1000000);
+INSERT INTO `phong` VALUES ('6', 'Phòng Vip6', 0, 'Đang Bảo Trì', 1000000);
+INSERT INTO `phong` VALUES ('7', 'Phòng Vip7', 0, 'Còn Trống', 1000000);
+INSERT INTO `phong` VALUES ('8', 'Phòng Vip7', 0, 'Còn Trống', 1000000);
+INSERT INTO `phong` VALUES ('9', 'Phòng Vip8', 0, 'Còn Trống', 1000000);
+
+-- ----------------------------
+-- Table structure for phong_dangsudung
+-- ----------------------------
+DROP TABLE IF EXISTS `phong_dangsudung`;
+CREATE TABLE `phong_dangsudung`  (
+  `IDPhong` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `ThoiGianBatDau` datetime(6) NOT NULL,
+  `IDKhachHang` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `DsDichVu` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of phong_dangsudung
+-- ----------------------------
+INSERT INTO `phong_dangsudung` VALUES ('3', '2018-05-18 16:17:00.000000', '0', '1,0,2');
+INSERT INTO `phong_dangsudung` VALUES ('11', '2018-05-10 16:17:00.000000', '1', '1,2');
+INSERT INTO `phong_dangsudung` VALUES ('17', '2018-05-05 16:17:00.000000', '1', '2');
+INSERT INTO `phong_dangsudung` VALUES ('19', '2018-05-08 16:17:00.000000', '2', '1,0,2,2');
 
 SET FOREIGN_KEY_CHECKS = 1;

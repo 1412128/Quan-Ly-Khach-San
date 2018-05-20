@@ -8,20 +8,20 @@ namespace QLKS.DTO
     public class AccountDTO
     {
         #region Attribute
-        private string _idNhanVien;
+        private string _idTaiKhoan;
         private string _taiKhoan;
         private string _matKhau;
 
-        public string IdNhanVien
+        public string IDTaiKhoan
         {
             get
             {
-                return _idNhanVien;
+                return _idTaiKhoan;
             }
 
             set
             {
-                _idNhanVien = value;
+                _idTaiKhoan = value;
             }
         }
 

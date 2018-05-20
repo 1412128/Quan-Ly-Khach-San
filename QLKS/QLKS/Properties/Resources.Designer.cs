@@ -73,9 +73,9 @@ namespace QLKS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _261986 {
+        internal static System.Drawing.Bitmap _018_320_door_exit_logout_5121 {
             get {
-                object obj = ResourceManager.GetObject("261986", resourceCulture);
+                object obj = ResourceManager.GetObject("018_320_door_exit_logout-5121", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +183,26 @@ namespace QLKS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_hand_drawn_arrow_outline_318_51961 {
+            get {
+                object obj = ResourceManager.GetObject("back-hand-drawn-arrow-outline_318-51961", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap back_hand_drawn_arrow_outline_318_519611 {
+            get {
+                object obj = ResourceManager.GetObject("back-hand-drawn-arrow-outline_318-519611", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background {
             get {
                 object obj = ResourceManager.GetObject("background", resourceCulture);
@@ -206,6 +226,16 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap book {
             get {
                 object obj = ResourceManager.GetObject("book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnDelete {
+            get {
+                object obj = ResourceManager.GetObject("btnDelete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +293,16 @@ namespace QLKS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hotel_services_005_512 {
+            get {
+                object obj = ResourceManager.GetObject("hotel-services-005-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -276,6 +316,16 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap img_346455 {
             get {
                 object obj = ResourceManager.GetObject("img_346455", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_512 {
+            get {
+                object obj = ResourceManager.GetObject("key-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,6 +413,36 @@ namespace QLKS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap startrom2 {
+            get {
+                object obj = ResourceManager.GetObject("startrom2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startrom5 {
+            get {
+                object obj = ResourceManager.GetObject("startrom5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startroom1 {
+            get {
+                object obj = ResourceManager.GetObject("startroom1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stop_play_control_player_pause_32aea5106f711b77_512x512 {
             get {
                 object obj = ResourceManager.GetObject("stop-play-control-player-pause-32aea5106f711b77-512x512", resourceCulture);
@@ -376,6 +456,16 @@ namespace QLKS.Properties {
         internal static System.Drawing.Bitmap UI_Glyph_03_18_512 {
             get {
                 object obj = ResourceManager.GetObject("UI_Glyph_03-18-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UI_Glyph_03_18_5121 {
+            get {
+                object obj = ResourceManager.GetObject("UI_Glyph_03-18-5121", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

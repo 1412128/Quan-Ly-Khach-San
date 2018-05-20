@@ -13,7 +13,7 @@ namespace QLKS.DTO
         private string _ngaySinh;
         private int _cmnd;
         private string _chucVu;
-        private float _luong;
+        private int _luong;
 
         public string IdNhanVien
         {
@@ -80,7 +80,7 @@ namespace QLKS.DTO
             }
         }
 
-        public float Luong
+        public int Luong
         {
             get
             {

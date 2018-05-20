@@ -55,6 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\AccountBUS.cs" />
+    <Compile Include="BUS\BaoBieuBUS.cs" />
+    <Compile Include="BUS\DichVuBUS.cs" />
+    <Compile Include="BUS\KhachHangBUS.cs" />
+    <Compile Include="BUS\NhanVienBUS.cs" />
+    <Compile Include="BUS\PhongBUS.cs" />
+    <Compile Include="DTO\PhongDangSuDungDTO.cs" />
+    <Compile Include="Global.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\BaoBieuDAO.cs" />
     <Compile Include="DAO\DichVuDAO.cs" />
@@ -73,6 +81,30 @@
     </Compile>
     <Compile Include="GUI\BaoBieu.Designer.cs">
       <DependentUpon>BaoBieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Component\btnExit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Component\btnExit.Designer.cs">
+      <DependentUpon>btnExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Component\ptbDangXuat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Component\ptbDangXuat.Designer.cs">
+      <DependentUpon>ptbDangXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Component\ptbLogo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Component\ptbLogo.Designer.cs">
+      <DependentUpon>ptbLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Component\ptbTroVe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Component\ptbTroVe.Designer.cs">
+      <DependentUpon>ptbTroVe.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\DangNhap.cs">
       <SubType>Form</SubType>
@@ -104,11 +136,11 @@
     <Compile Include="GUI\DichVu.Designer.cs">
       <DependentUpon>DichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Phong.cs">
+    <Compile Include="GUI\KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Phong.Designer.cs">
-      <DependentUpon>Phong.cs</DependentUpon>
+    <Compile Include="GUI\KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QLBaoBieu.cs">
       <SubType>Form</SubType>
@@ -128,11 +160,23 @@
     <Compile Include="GUI\QLDichVu.Designer.cs">
       <DependentUpon>QLDichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\QLKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLKhachHang.Designer.cs">
+      <DependentUpon>QLKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\QLPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\QLPhong.Designer.cs">
       <DependentUpon>QLPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLTaiKhoan.Designer.cs">
+      <DependentUpon>QLTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QLTrangChu.cs">
       <SubType>Form</SubType>
@@ -148,14 +192,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="GUI\BaoBieu.resx">
       <DependentUpon>BaoBieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Component\ptbLogo.resx">
+      <DependentUpon>ptbLogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -172,8 +213,8 @@
     <EmbeddedResource Include="GUI\DichVu.resx">
       <DependentUpon>DichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Phong.resx">
-      <DependentUpon>Phong.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QLBaoBieu.resx">
       <DependentUpon>QLBaoBieu.cs</DependentUpon>
@@ -184,8 +225,14 @@
     <EmbeddedResource Include="GUI\QLDichVu.resx">
       <DependentUpon>QLDichVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLKhachHang.resx">
+      <DependentUpon>QLKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QLPhong.resx">
       <DependentUpon>QLPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLTaiKhoan.resx">
+      <DependentUpon>QLTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QLTrangChu.resx">
       <DependentUpon>QLTrangChu.cs</DependentUpon>
@@ -203,9 +250,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -217,115 +261,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\login.png" />
+    <None Include="Resources\startrom2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user.png" />
+    <None Include="Resources\startrom5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\password.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\71-1436214917.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\5-star-rating-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\5start.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\5start1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4start.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3start.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user_cards-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\UI_Glyph_03-18-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\018_320_door_exit_logout-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kripto-search-b.png" />
+    <None Include="Resources\startroom1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\261986.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\book.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pay.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add-button_318-32466.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2619861.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttons.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hand_dollar-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled-4-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\circled-left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\v-03-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\emergency-alert-icon-alert-icon-8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stop-play-control-player-pause-32aea5106f711b77-512x512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Programming-Show-Property-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\img_346455.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bedroom-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hotel-service_318-29285.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\All_reports.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUS\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -37,7 +37,7 @@ namespace QLKS.DAO
             List<string[]> _list = new List<string[]>();
             BaoBieuDTO _data = new BaoBieuDTO();
 
-            string query = string.Format("SELECT * FROM baobieu WHERE IDBaoBieu={0}", _id);
+            string query = string.Format("SELECT * FROM baobieu WHERE IDBaoBieu='{0}'", _id);
             _list = DBConnection.getInstance().Select(query);
 
             _data.IdBaoBieu = _list[0][0];
@@ -49,6 +49,30 @@ namespace QLKS.DAO
             _data.DsDichVu = _list[0][6];
             _data.TongTien = Int32.Parse(_list[0][7]);
 
+            return _data;
+        }
+        public List<BaoBieuDTO> LayThongTinBaoBieuTheoIDKhachHang(string _id)
+        {
+            List<string[]> _list = new List<string[]>();
+            List<BaoBieuDTO> _data = new List<BaoBieuDTO>();
+
+            string query = string.Format("SELECT * FROM baobieu WHERE IDKhachHang ='{0}'",_id);
+            _list = DBConnection.getInstance().Select(query);
+
+            foreach (var item in _list)
+            {
+                BaoBieuDTO _temp = new BaoBieuDTO();
+                _temp.IdBaoBieu = item[0];
+                _temp.IdPhong = item[1];
+                _temp.IdNhanVien = item[2];
+                _temp.IdKhachHang = item[3];
+                _temp.ThoiGianBatDau = item[4];
+                _temp.ThoiGianKetThuc = item[5];
+                _temp.DsDichVu = item[6];
+                _temp.TongTien = Int32.Parse(item[7]);
+
+                _data.Add(_temp);
+            }
             return _data;
         }
         public bool XoaThongTinBaoBieu(string _id)

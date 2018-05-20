@@ -129,10 +129,10 @@ namespace QLKS
                 cmd.CommandText = query;
                 //Assign the connection using Connection
                 cmd.Connection = connection;
-
+            
                 //Execute query
                 cmd.ExecuteNonQuery();
-
+               
                 //close connection
                 this.CloseConnection();
                 return true;
