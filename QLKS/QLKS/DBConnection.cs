@@ -128,8 +128,7 @@ namespace QLKS
                 //Assign the query using CommandText
                 cmd.CommandText = query;
                 //Assign the connection using Connection
-                cmd.Connection = connection;
-            
+                cmd.Connection = connection;        
                 //Execute query
                 cmd.ExecuteNonQuery();
                

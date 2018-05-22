@@ -11,7 +11,7 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 20/05/2018 17:40:00
+ Date: 22/05/2018 23:23:33
 */
 
 SET NAMES utf8mb4;
@@ -63,6 +63,10 @@ CREATE TABLE `baobieu`  (
 -- Records of baobieu
 -- ----------------------------
 INSERT INTO `baobieu` VALUES ('0', '0', '1', '0', '2018-01-01 00:00:00.000000', '2018-01-03 00:00:00.000000', '1,0,2', 1000000);
+INSERT INTO `baobieu` VALUES ('1', '11', '1', '1', '2018-05-10 16:17:00.000000', '2018-05-22 22:08:04.000000', '', 293851200);
+INSERT INTO `baobieu` VALUES ('2', '3', '1', '0', '2018-05-18 16:17:00.000000', '2018-05-22 22:08:37.000000', ',0,1,2', 102961500);
+INSERT INTO `baobieu` VALUES ('3', '17', '1', '1', '2018-05-05 16:17:00.000000', '2018-05-22 22:09:40.000000', '2', 206940000);
+INSERT INTO `baobieu` VALUES ('4', '2', '1', '9', '2018-05-22 22:21:24.000000', '2018-05-22 22:29:16.000000', '', 131159);
 
 -- ----------------------------
 -- Table structure for dichvu
@@ -79,9 +83,9 @@ CREATE TABLE `dichvu`  (
 -- ----------------------------
 -- Records of dichvu
 -- ----------------------------
-INSERT INTO `dichvu` VALUES ('0', 'Massage1', 1000000, 'Tạm ngưng dịch vụ');
-INSERT INTO `dichvu` VALUES ('1', 'Thuê Xe Máy', 100000, 'Tạm hết dịch vụ');
-INSERT INTO `dichvu` VALUES ('2', 'Thuê xe đạp', 1000, 'Tạm ngưng dịch vụ');
+INSERT INTO `dichvu` VALUES ('0', 'Massage1', 1000000, 'Đang hoạt động');
+INSERT INTO `dichvu` VALUES ('1', 'Thuê Xe Máy', 100000, 'Đang hoạt động');
+INSERT INTO `dichvu` VALUES ('2', 'Thuê xe đạp', 1000, 'Đang hoạt động');
 
 -- ----------------------------
 -- Table structure for khachhang
@@ -105,6 +109,10 @@ INSERT INTO `khachhang` VALUES ('2', 'Ho Van Cuoi', 333333333, '2000-01-01', 123
 INSERT INTO `khachhang` VALUES ('3', 'Ho Ngoc Ha', 444444444, '2001-08-12', 123456789);
 INSERT INTO `khachhang` VALUES ('4', 'Ngo Viet Cuong', 555555555, '1996-05-05', 123456789);
 INSERT INTO `khachhang` VALUES ('5', 'Van A', 1234, '1996-07-19', 12345678);
+INSERT INTO `khachhang` VALUES ('6', 'Nguyen Dat', 123456789, '1996-01-02', 132);
+INSERT INTO `khachhang` VALUES ('7', 'Nguyen', 123, '1996-1-1', 123465789);
+INSERT INTO `khachhang` VALUES ('8', 'Ngoc', 123412, '1996-01-12', 231313);
+INSERT INTO `khachhang` VALUES ('9', 'asd2', 12312, '1996-01-01', 1231);
 
 -- ----------------------------
 -- Table structure for nhanvien
@@ -142,7 +150,7 @@ CREATE TABLE `phong`  (
 -- ----------------------------
 -- Records of phong
 -- ----------------------------
-INSERT INTO `phong` VALUES ('0', 'Phòng Vip1', 0, 'Còn Trống', 1000000);
+INSERT INTO `phong` VALUES ('0', 'Phòng Vip1', 0, 'Đang Sử Dụng', 1000000);
 INSERT INTO `phong` VALUES ('1', 'Phòng Vip2', 0, 'Còn Trống', 1000000);
 INSERT INTO `phong` VALUES ('10', 'Phòng Vip10', 0, 'Đang Bảo Trì', 1000000);
 INSERT INTO `phong` VALUES ('11', 'Phòng Vip11', 0, 'Đang Sử Dụng', 1000000);
@@ -151,7 +159,7 @@ INSERT INTO `phong` VALUES ('13', 'Phòng 4 Sao2', 1, 'Còn Trống', 500000);
 INSERT INTO `phong` VALUES ('14', 'Phòng 4 Sao3', 1, 'Còn Trống', 500000);
 INSERT INTO `phong` VALUES ('15', 'Phòng 4 Sao4', 1, 'Còn Trống', 500000);
 INSERT INTO `phong` VALUES ('16', 'Phòng 4 Sao5', 1, 'Đang Bảo Trì', 50000);
-INSERT INTO `phong` VALUES ('17', 'Phòng 4 Sao6', 1, 'Đang Sử Dụng', 500000);
+INSERT INTO `phong` VALUES ('17', 'Phòng 4 Sao6', 1, 'Còn Trống', 500000);
 INSERT INTO `phong` VALUES ('18', 'Phòng 4 Sao7', 1, 'Đang Bảo Trì', 500000);
 INSERT INTO `phong` VALUES ('19', 'Phòng 4 Sao8', 1, 'Đang Sử Dụng', 500000);
 INSERT INTO `phong` VALUES ('2', 'Phòng Vip3', 0, 'Còn Trống', 1000000);
@@ -160,7 +168,7 @@ INSERT INTO `phong` VALUES ('21', 'Phòng 4 Sao1', 1, 'Đang Bảo Trì', 500000
 INSERT INTO `phong` VALUES ('22', 'Phòng 3 Sao1', 2, 'Đang Bảo Trì', 300000);
 INSERT INTO `phong` VALUES ('23', 'Phòng 3 Sao2', 2, 'Còn Trống', 300000);
 INSERT INTO `phong` VALUES ('24', 'Phòng 3 Sao3', 2, 'Còn Trống', 300000);
-INSERT INTO `phong` VALUES ('3', 'Phòng Vip3', 0, 'Đang Sử Dụng', 1000000);
+INSERT INTO `phong` VALUES ('3', 'Phòng Vip3', 0, 'Còn Trống', 1000000);
 INSERT INTO `phong` VALUES ('4', 'Phòng Vip4', 0, 'Đang Bảo Trì', 1000000);
 INSERT INTO `phong` VALUES ('6', 'Phòng Vip6', 0, 'Đang Bảo Trì', 1000000);
 INSERT INTO `phong` VALUES ('7', 'Phòng Vip7', 0, 'Còn Trống', 1000000);
@@ -175,15 +183,15 @@ CREATE TABLE `phong_dangsudung`  (
   `IDPhong` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `ThoiGianBatDau` datetime(6) NOT NULL,
   `IDKhachHang` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `DsDichVu` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+  `DsDichVu` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `GiaDichVu` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of phong_dangsudung
 -- ----------------------------
-INSERT INTO `phong_dangsudung` VALUES ('3', '2018-05-18 16:17:00.000000', '0', '1,0,2');
-INSERT INTO `phong_dangsudung` VALUES ('11', '2018-05-10 16:17:00.000000', '1', '1,2');
-INSERT INTO `phong_dangsudung` VALUES ('17', '2018-05-05 16:17:00.000000', '1', '2');
-INSERT INTO `phong_dangsudung` VALUES ('19', '2018-05-08 16:17:00.000000', '2', '1,0,2,2');
+INSERT INTO `phong_dangsudung` VALUES ('19', '2018-05-08 16:17:00.000000', '2', '1,0,2,2', '642030');
+INSERT INTO `phong_dangsudung` VALUES ('0', '2018-05-22 14:45:44.000000', '7', ',0,1,2', '1101000');
+INSERT INTO `phong_dangsudung` VALUES ('11', '2018-05-22 22:14:35.000000', '8', '', '0');
 
 SET FOREIGN_KEY_CHECKS = 1;

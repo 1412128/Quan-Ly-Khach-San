@@ -38,6 +38,22 @@ namespace QLKS.BUS
             }
 
         }
+        public List<PhongDTO> LayDanhSachPhongTheoIdPhong(string s, List<PhongDTO> _data)
+        {
+            List<PhongDTO> _danhsach = new List<PhongDTO>();    
+            foreach (var item in _data)
+            {
+               
+                if (item.IdPhong.Contains(s))
+                {
+                    _danhsach.Add(item);                
+                }
+                
+            }
+
+            return _danhsach;
+
+        }
         public PhongDTO LayThongTinPhong(string _id)
         {
             //Xu ly nghiep vu
@@ -160,6 +176,11 @@ namespace QLKS.BUS
 
                 throw ex;
             }
+        }
+        public bool CapNhatThongTinPhongDangSuDung(PhongDangSuDungDTO phong)
+        {
+            return _phongDAO.CapNhatThongTinPhongDangSuDung(phong);
+
         }
     }
 }

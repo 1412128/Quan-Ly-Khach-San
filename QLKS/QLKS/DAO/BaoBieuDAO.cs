@@ -82,12 +82,24 @@ namespace QLKS.DAO
         }
         public bool ThemThongTinBaoBieu(BaoBieuDTO _baobieu)
         {
-            string query = string.Format("INSERT INTO baobieu (IDBaoBieu, IDPhong, IDNhanVien, IDKhachHang, ThoiGianBatDau, ThoiGianKetThuc, DSDichVu, TongTien) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", _baobieu.IdBaoBieu, _baobieu.IdPhong, _baobieu.IdNhanVien, _baobieu.IdKhachHang, _baobieu.ThoiGianBatDau, _baobieu.ThoiGianKetThuc, _baobieu.DsDichVu, _baobieu.TongTien);
+            DateTime dtBD = DateTime.Parse(_baobieu.ThoiGianBatDau);
+            string mBD = dtBD.ToString("yyyy-MM-dd'T'HH:mm:ss");
+
+            DateTime dtKT = DateTime.Parse(_baobieu.ThoiGianKetThuc);
+            string mKT = dtKT.ToString("yyyy-MM-dd'T'HH:mm:ss");
+
+            string query = string.Format("INSERT INTO baobieu (IDBaoBieu, IDPhong, IDNhanVien, IDKhachHang, ThoiGianBatDau, ThoiGianKetThuc, DSDichVu, TongTien) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", _baobieu.IdBaoBieu, _baobieu.IdPhong, _baobieu.IdNhanVien, _baobieu.IdKhachHang, mBD, mKT, _baobieu.DsDichVu, _baobieu.TongTien);
             return DBConnection.getInstance().Insert(query) ? true : false;
         }
         public bool CapNhatThongTinBaoBieu(BaoBieuDTO _baobieu)
         {
-            string query = string.Format("UPDATE baobieu SET IDPhong = '{0}', IDNhanVien = '{1}', IDKhachHang = '{2}', ThoiGianBatDau = '{3}', ThoiGianKetThuc = '{4}', DSDichVu = '{5}', TongTien ='{6}' WHERE  IDBaoBieu= '{5}'", _baobieu.IdPhong, _baobieu.IdNhanVien, _baobieu.IdKhachHang, _baobieu.ThoiGianBatDau, _baobieu.ThoiGianKetThuc, _baobieu.DsDichVu, _baobieu.TongTien, _baobieu.IdBaoBieu);
+            DateTime dtBD = DateTime.Parse(_baobieu.ThoiGianBatDau);
+            string mBD = dtBD.ToString("yyyy-MM-dd'T'HH:mm:ss");
+
+            DateTime dtKT = DateTime.Parse(_baobieu.ThoiGianKetThuc);
+            string mKT = dtKT.ToString("yyyy-MM-dd'T'HH:mm:ss");
+
+            string query = string.Format("UPDATE baobieu SET IDPhong = '{0}', IDNhanVien = '{1}', IDKhachHang = '{2}', ThoiGianBatDau = '{3}', ThoiGianKetThuc = '{4}', DSDichVu = '{5}', TongTien ='{6}' WHERE  IDBaoBieu= '{5}'", _baobieu.IdPhong, _baobieu.IdNhanVien, _baobieu.IdKhachHang, mBD, mKT, _baobieu.DsDichVu, _baobieu.TongTien, _baobieu.IdBaoBieu);
             return DBConnection.getInstance().Update(query) ? true : false;
         }
     }

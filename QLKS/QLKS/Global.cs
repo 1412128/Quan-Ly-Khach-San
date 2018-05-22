@@ -60,5 +60,23 @@ namespace QLKS
                 idDichVu = Int32.Parse(_list[_list.Count - 1].IDTaiKhoan.ToString()) + 1;
             return idDichVu.ToString();
         }
+        public string idKhachHang()
+        {
+            KhachHangBUS dv = new KhachHangBUS();
+            List<KhachHangDTO> _list = dv.LayDanhSachKhachHang();
+            int idDichVu = 0;
+            if (_list.Count != 0)
+                idDichVu = Int32.Parse(_list[_list.Count - 1].IdKhachHang.ToString()) + 1;
+            return idDichVu.ToString();
+        }
+        public string idBaoBieu()
+        {
+            BaoBieuBUS dv = new BaoBieuBUS();
+            List<BaoBieuDTO> _list = dv.LayDanhSachBaoBieu();
+            int idDichVu = 0;
+            if (_list.Count != 0)
+                idDichVu = Int32.Parse(_list[_list.Count - 1].IdBaoBieu.ToString()) + 1;
+            return idDichVu.ToString();
+        }
     }
 }

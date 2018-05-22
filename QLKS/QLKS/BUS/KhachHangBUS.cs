@@ -56,7 +56,7 @@ namespace QLKS.BUS
             return KHDAO.CapNhatThongTinKhachHang(nv);
 
         }
-        public bool ThemThongTinNhanVien(KhachHangDTO nv)
+        public bool ThemThongTinKhachHang(KhachHangDTO nv)
         {
             //Xu ly nghiep vu    
             if (KHDAO.ThemThongTinKhachHang(nv))

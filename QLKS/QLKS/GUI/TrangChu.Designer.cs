@@ -30,18 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangChu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnThreeStar = new System.Windows.Forms.Button();
+            this.btnFourStar = new System.Windows.Forms.Button();
+            this.btnFiveStar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtGia = new System.Windows.Forms.Label();
             this.txtThoiGianDatPhong = new System.Windows.Forms.Label();
             this.txtTinhTrang = new System.Windows.Forms.Label();
             this.txtTenKH = new System.Windows.Forms.Label();
@@ -54,25 +62,16 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnThreeStar = new System.Windows.Forms.Button();
-            this.btnFourStar = new System.Windows.Forms.Button();
-            this.btnFiveStar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTimKiem = new MetroFramework.Controls.MetroTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,6 +86,67 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(697, 50);
             this.panel1.TabIndex = 0;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button7.Location = new System.Drawing.Point(585, 1);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(90, 50);
+            this.button7.TabIndex = 13;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(492, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(90, 50);
+            this.button6.TabIndex = 12;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = global::QLKS.Properties.Resources.Untitled_4_512;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(136, 1);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(90, 50);
+            this.button5.TabIndex = 11;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(35, 1);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(90, 50);
+            this.button4.TabIndex = 7;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel2
             // 
@@ -132,6 +192,62 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 5);
             this.label3.TabIndex = 0;
+            // 
+            // btnThreeStar
+            // 
+            this.btnThreeStar.BackColor = System.Drawing.Color.Khaki;
+            this.btnThreeStar.BackgroundImage = global::QLKS.Properties.Resources._3start;
+            this.btnThreeStar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThreeStar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThreeStar.FlatAppearance.BorderSize = 0;
+            this.btnThreeStar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThreeStar.Location = new System.Drawing.Point(0, 384);
+            this.btnThreeStar.Name = "btnThreeStar";
+            this.btnThreeStar.Size = new System.Drawing.Size(150, 111);
+            this.btnThreeStar.TabIndex = 6;
+            this.btnThreeStar.UseVisualStyleBackColor = false;
+            this.btnThreeStar.Click += new System.EventHandler(this.btnThreeStar_Click);
+            // 
+            // btnFourStar
+            // 
+            this.btnFourStar.BackColor = System.Drawing.Color.Khaki;
+            this.btnFourStar.BackgroundImage = global::QLKS.Properties.Resources._4start;
+            this.btnFourStar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFourStar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFourStar.FlatAppearance.BorderSize = 0;
+            this.btnFourStar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFourStar.Location = new System.Drawing.Point(0, 273);
+            this.btnFourStar.Name = "btnFourStar";
+            this.btnFourStar.Size = new System.Drawing.Size(150, 111);
+            this.btnFourStar.TabIndex = 5;
+            this.btnFourStar.UseVisualStyleBackColor = false;
+            this.btnFourStar.Click += new System.EventHandler(this.btnFourStar_Click);
+            // 
+            // btnFiveStar
+            // 
+            this.btnFiveStar.BackColor = System.Drawing.Color.Khaki;
+            this.btnFiveStar.BackgroundImage = global::QLKS.Properties.Resources._5start1;
+            this.btnFiveStar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFiveStar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFiveStar.FlatAppearance.BorderSize = 0;
+            this.btnFiveStar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiveStar.Location = new System.Drawing.Point(0, 162);
+            this.btnFiveStar.Name = "btnFiveStar";
+            this.btnFiveStar.Size = new System.Drawing.Size(150, 111);
+            this.btnFiveStar.TabIndex = 0;
+            this.btnFiveStar.UseVisualStyleBackColor = false;
+            this.btnFiveStar.Click += new System.EventHandler(this.btnFiveStar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::QLKS.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(4, -4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 167);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // panel4
             // 
@@ -191,6 +307,21 @@
             this.panel8.Size = new System.Drawing.Size(233, 31);
             this.panel8.TabIndex = 25;
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.YellowGreen;
+            this.button8.BackgroundImage = global::QLKS.Properties.Resources.add;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(48, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(33, 25);
+            this.button8.TabIndex = 14;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -206,7 +337,6 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.txtGia);
             this.panel6.Controls.Add(this.txtThoiGianDatPhong);
             this.panel6.Controls.Add(this.txtTinhTrang);
             this.panel6.Controls.Add(this.txtTenKH);
@@ -222,16 +352,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(224, 158);
             this.panel6.TabIndex = 23;
-            // 
-            // txtGia
-            // 
-            this.txtGia.AutoSize = true;
-            this.txtGia.BackColor = System.Drawing.Color.Transparent;
-            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.Location = new System.Drawing.Point(74, 34);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(0, 17);
-            this.txtGia.TabIndex = 10;
             // 
             // txtThoiGianDatPhong
             // 
@@ -348,21 +468,6 @@
             this.label1.Size = new System.Drawing.Size(232, 5);
             this.label1.TabIndex = 9;
             // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = global::QLKS.Properties.Resources.add;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(48, 4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(33, 25);
-            this.button8.TabIndex = 14;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -375,6 +480,7 @@
             this.button11.Size = new System.Drawing.Size(115, 55);
             this.button11.TabIndex = 21;
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -391,155 +497,40 @@
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // metroTextBox1
+            // txtTimKiem
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(438, 2);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.DisplayIcon = true;
-            this.metroTextBox1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.metroTextBox1.Icon = global::QLKS.Properties.Resources.kripto_search_b;
-            this.metroTextBox1.IconRight = true;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(150, 55);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.Size = new System.Drawing.Size(466, 30);
-            this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMark = "Nhập mã số phòng cần tìm";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(585, 1);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(90, 50);
-            this.button7.TabIndex = 13;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(492, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(90, 50);
-            this.button6.TabIndex = 12;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = global::QLKS.Properties.Resources.Untitled_4_512;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(136, 1);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(90, 50);
-            this.button5.TabIndex = 11;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(35, 1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(90, 50);
-            this.button4.TabIndex = 7;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnThreeStar
-            // 
-            this.btnThreeStar.BackColor = System.Drawing.Color.Khaki;
-            this.btnThreeStar.BackgroundImage = global::QLKS.Properties.Resources._3start;
-            this.btnThreeStar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThreeStar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThreeStar.FlatAppearance.BorderSize = 0;
-            this.btnThreeStar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThreeStar.Location = new System.Drawing.Point(0, 384);
-            this.btnThreeStar.Name = "btnThreeStar";
-            this.btnThreeStar.Size = new System.Drawing.Size(150, 111);
-            this.btnThreeStar.TabIndex = 6;
-            this.btnThreeStar.UseVisualStyleBackColor = false;
-            this.btnThreeStar.Click += new System.EventHandler(this.btnThreeStar_Click);
-            // 
-            // btnFourStar
-            // 
-            this.btnFourStar.BackColor = System.Drawing.Color.Khaki;
-            this.btnFourStar.BackgroundImage = global::QLKS.Properties.Resources._4start;
-            this.btnFourStar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFourStar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFourStar.FlatAppearance.BorderSize = 0;
-            this.btnFourStar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFourStar.Location = new System.Drawing.Point(0, 273);
-            this.btnFourStar.Name = "btnFourStar";
-            this.btnFourStar.Size = new System.Drawing.Size(150, 111);
-            this.btnFourStar.TabIndex = 5;
-            this.btnFourStar.UseVisualStyleBackColor = false;
-            this.btnFourStar.Click += new System.EventHandler(this.btnFourStar_Click);
-            // 
-            // btnFiveStar
-            // 
-            this.btnFiveStar.BackColor = System.Drawing.Color.Khaki;
-            this.btnFiveStar.BackgroundImage = global::QLKS.Properties.Resources._5start1;
-            this.btnFiveStar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFiveStar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFiveStar.FlatAppearance.BorderSize = 0;
-            this.btnFiveStar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiveStar.Location = new System.Drawing.Point(0, 162);
-            this.btnFiveStar.Name = "btnFiveStar";
-            this.btnFiveStar.Size = new System.Drawing.Size(150, 111);
-            this.btnFiveStar.TabIndex = 0;
-            this.btnFiveStar.UseVisualStyleBackColor = false;
-            this.btnFiveStar.Click += new System.EventHandler(this.btnFiveStar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::QLKS.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(4, -4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 167);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.txtTimKiem.CustomButton.Image = null;
+            this.txtTimKiem.CustomButton.Location = new System.Drawing.Point(438, 2);
+            this.txtTimKiem.CustomButton.Name = "";
+            this.txtTimKiem.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtTimKiem.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTimKiem.CustomButton.TabIndex = 1;
+            this.txtTimKiem.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTimKiem.CustomButton.UseSelectable = true;
+            this.txtTimKiem.CustomButton.Visible = false;
+            this.txtTimKiem.DisplayIcon = true;
+            this.txtTimKiem.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtTimKiem.Icon = global::QLKS.Properties.Resources.kripto_search_b;
+            this.txtTimKiem.IconRight = true;
+            this.txtTimKiem.Lines = new string[0];
+            this.txtTimKiem.Location = new System.Drawing.Point(150, 55);
+            this.txtTimKiem.MaxLength = 32767;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.SelectionLength = 0;
+            this.txtTimKiem.SelectionStart = 0;
+            this.txtTimKiem.Size = new System.Drawing.Size(466, 30);
+            this.txtTimKiem.TabIndex = 3;
+            this.txtTimKiem.UseSelectable = true;
+            this.txtTimKiem.WaterMark = "Nhập mã số phòng cần tìm";
+            this.txtTimKiem.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtTimKiem.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
             // 
             // TrangChu
             // 
@@ -549,7 +540,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "TrangChu";
@@ -557,12 +548,12 @@
             this.ShowInTaskbar = false;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -574,7 +565,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtTimKiem;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
@@ -600,7 +591,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label txtGia;
         private System.Windows.Forms.Label txtThoiGianDatPhong;
         private System.Windows.Forms.Label txtTinhTrang;
         private System.Windows.Forms.Label txtTenKH;

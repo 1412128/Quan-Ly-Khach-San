@@ -24,7 +24,20 @@ namespace QLKS.BUS
                 throw ex;
             }
 
-        }       
+        }
+        public List<DichVuDTO> LayThongTinDichVuTheoTrangThai(string s)
+        {
+            try
+            {
+                return dvDAO.LayThongTinDichVuTheoTrangThai(s);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
         public DichVuDTO LayThongTinDichVu(string _id)
         {
             //Xu ly nghiep vu
@@ -35,7 +48,7 @@ namespace QLKS.BUS
             catch (Exception ex)
             {
 
-                throw ex;
+                return null;
             }
         }
         public bool XoaThongTinDichVu(string _id)

@@ -43,6 +43,26 @@ namespace QLKS.DAO
 
             return _data;
         }
+        public List<DichVuDTO> LayThongTinDichVuTheoTrangThai(string trangthai)
+        {   
+            List<string[]> _list = new List<string[]>();
+            List<DichVuDTO> _data = new List<DichVuDTO>();
+
+            string query = string.Format("SELECT * FROM dichvu WHERE TinhTrang='{0}'", trangthai);
+            _list = DBConnection.getInstance().Select(query);
+
+            foreach (var item in _list)
+            {
+                DichVuDTO _temp = new DichVuDTO();
+                _temp.IdDichVu = item[0];
+                _temp.TenDichVu = item[1];
+                _temp.Gia = Int32.Parse(item[2]);
+                _temp.TinhTrang = item[3];
+
+                _data.Add(_temp);
+            }
+            return _data;
+        }
         public bool XoaThongTinDichVu(string _id)
         {
             string query = string.Format("DELETE FROM dichvu WHERE IDDichVu= {0}", _id);

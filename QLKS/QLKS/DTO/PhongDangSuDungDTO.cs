@@ -11,6 +11,7 @@ namespace QLKS.DTO
         string _thoiGianBatDau;
         string _idKhachHang;
         string _DsDichVu;
+        string _GiaDichVu;
 
         public string IdPhong
         {
@@ -61,6 +62,19 @@ namespace QLKS.DTO
             set
             {
                 _DsDichVu = value;
+            }
+        }
+
+        public string GiaDichVu
+        {
+            get
+            {
+                return _GiaDichVu;
+            }
+
+            set
+            {
+                _GiaDichVu = value;
             }
         }
     }

@@ -41,15 +41,15 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnChinhSua = new System.Windows.Forms.Button();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.txtTimKiem = new MetroFramework.Controls.MetroTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGrdV = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.btnLoc = new System.Windows.Forms.Button();
+            this.dtBatDau = new MetroFramework.Controls.MetroDateTime();
+            this.dtKetThuc = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDangXuat1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTroVe1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo1)).BeginInit();
@@ -200,20 +200,21 @@
             this.panel1.Size = new System.Drawing.Size(800, 75);
             this.panel1.TabIndex = 47;
             // 
-            // btnChinhSua
+            // btnXuat
             // 
-            this.btnChinhSua.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnChinhSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChinhSua.FlatAppearance.BorderSize = 0;
-            this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChinhSua.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChinhSua.Location = new System.Drawing.Point(656, 286);
-            this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(100, 30);
-            this.btnChinhSua.TabIndex = 36;
-            this.btnChinhSua.Text = "Xuất";
-            this.btnChinhSua.UseVisualStyleBackColor = false;
+            this.btnXuat.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXuat.FlatAppearance.BorderSize = 0;
+            this.btnXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuat.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuat.Location = new System.Drawing.Point(656, 286);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(100, 30);
+            this.btnXuat.TabIndex = 36;
+            this.btnXuat.Text = "Xuất";
+            this.btnXuat.UseVisualStyleBackColor = false;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // txtTimKiem
             // 
@@ -276,11 +277,11 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dtKetThuc);
             this.panel2.Controls.Add(this.metroLabel1);
-            this.panel2.Controls.Add(this.metroComboBox2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.metroComboBox1);
-            this.panel2.Controls.Add(this.btnChinhSua);
+            this.panel2.Controls.Add(this.dtBatDau);
+            this.panel2.Controls.Add(this.btnLoc);
+            this.panel2.Controls.Add(this.btnXuat);
             this.panel2.Controls.Add(this.txtTimKiem);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(0, 76);
@@ -288,50 +289,48 @@
             this.panel2.Size = new System.Drawing.Size(800, 325);
             this.panel2.TabIndex = 46;
             // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(40, 286);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(179, 29);
-            this.metroComboBox1.TabIndex = 38;
-            this.metroComboBox1.UseSelectable = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SpringGreen;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(539, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Xóa";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // metroComboBox2
-            // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Location = new System.Drawing.Point(235, 286);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(179, 29);
-            this.metroComboBox2.TabIndex = 41;
-            this.metroComboBox2.UseSelectable = true;
-            // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(221, 289);
+            this.metroLabel1.Location = new System.Drawing.Point(269, 285);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(12, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(16, 25);
             this.metroLabel1.TabIndex = 6;
             this.metroLabel1.Text = ":";
+            // 
+            // btnLoc
+            // 
+            this.btnLoc.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnLoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoc.FlatAppearance.BorderSize = 0;
+            this.btnLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoc.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoc.Location = new System.Drawing.Point(539, 286);
+            this.btnLoc.Name = "btnLoc";
+            this.btnLoc.Size = new System.Drawing.Size(100, 30);
+            this.btnLoc.TabIndex = 40;
+            this.btnLoc.Text = "Lọc";
+            this.btnLoc.UseVisualStyleBackColor = false;
+            this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
+            // 
+            // dtBatDau
+            // 
+            this.dtBatDau.Location = new System.Drawing.Point(40, 285);
+            this.dtBatDau.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtBatDau.Name = "dtBatDau";
+            this.dtBatDau.Size = new System.Drawing.Size(227, 29);
+            this.dtBatDau.TabIndex = 6;
+            // 
+            // dtKetThuc
+            // 
+            this.dtKetThuc.Location = new System.Drawing.Point(286, 285);
+            this.dtKetThuc.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtKetThuc.Name = "dtKetThuc";
+            this.dtKetThuc.Size = new System.Drawing.Size(227, 29);
+            this.dtKetThuc.TabIndex = 7;
             // 
             // QLBaoBieu
             // 
@@ -366,14 +365,14 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnChinhSua;
+        private System.Windows.Forms.Button btnXuat;
         private MetroFramework.Controls.MetroTextBox txtTimKiem;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGrdV;
         private System.Windows.Forms.Panel panel2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLoc;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroDateTime dtKetThuc;
+        private MetroFramework.Controls.MetroDateTime dtBatDau;
     }
 }
