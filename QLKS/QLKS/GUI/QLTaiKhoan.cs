@@ -21,7 +21,8 @@ namespace QLKS.GUI
             txtId.Text = Global.Instance().idAccount();
 
             dataGrdV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-            dataGrdV.AllowUserToResizeRows = false;           
+            dataGrdV.AllowUserToResizeRows = false;
+     
 
 
             _bus = new AccountBUS();
@@ -46,6 +47,7 @@ namespace QLKS.GUI
         {
             int tmp = dataGrdV.CurrentCell.RowIndex;
             string index = dataGrdV.Rows[tmp].Cells[0].Value.ToString();
+
             AccountDTO idx = _bus.getAccount(index);
 
             txtId.Text = idx.IDTaiKhoan.ToString();

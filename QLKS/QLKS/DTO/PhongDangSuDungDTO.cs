@@ -77,5 +77,17 @@ namespace QLKS.DTO
                 _GiaDichVu = value;
             }
         }
+
+        public DAO.PhongDAO PhongDAO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
     }
 }

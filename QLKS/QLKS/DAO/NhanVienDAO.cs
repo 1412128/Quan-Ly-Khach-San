@@ -9,6 +9,18 @@ namespace QLKS.DAO
 {
     public class NhanVienDAO
     {
+        public NhanVienDTO NhanVienDTO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<NhanVienDTO> LayDanhSachNhanVien()
         {
             List<string[]> _list = new List<string[]>();

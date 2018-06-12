@@ -11,6 +11,18 @@ namespace QLKS.BUS
     {
         AccountDAO _dao = new AccountDAO();
 
+        public AccountDAO AccountDAO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<AccountDTO> getAllAccount()
         {
             try

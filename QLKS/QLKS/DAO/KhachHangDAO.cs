@@ -8,6 +8,18 @@ namespace QLKS.DAO
 {
     public class KhachHangDAO
     {
+        internal BUS.KhachHangBUS KhachHangBUS
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<KhachHangDTO> LayDanhSachKhachHang()
         {
             List<string[]> _list = new List<string[]>();

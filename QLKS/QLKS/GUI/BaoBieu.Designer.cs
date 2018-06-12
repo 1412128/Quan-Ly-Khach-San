@@ -33,6 +33,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit1 = new QLKS.GUI.Component.btnExit(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.lblIDPhong = new System.Windows.Forms.Label();
             this.lblIDBaoBieu = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,14 +57,12 @@
             this.lblChiPhi = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnTroVe = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnExit1 = new QLKS.GUI.Component.btnExit(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -97,6 +97,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 75);
             this.panel1.TabIndex = 4;
+            // 
+            // btnExit1
+            // 
+            this.btnExit1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit1.BackgroundImage")));
+            this.btnExit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit1.FlatAppearance.BorderSize = 0;
+            this.btnExit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit1.Location = new System.Drawing.Point(470, 2);
+            this.btnExit1.Name = "btnExit1";
+            this.btnExit1.Size = new System.Drawing.Size(27, 25);
+            this.btnExit1.TabIndex = 38;
+            this.btnExit1.UseVisualStyleBackColor = true;
+            this.btnExit1.Click += new System.EventHandler(this.btnExit1_Click);
             // 
             // pictureBox1
             // 
@@ -229,6 +243,19 @@
             this.panel4.Size = new System.Drawing.Size(200, 143);
             this.panel4.TabIndex = 38;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(200, 143);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -328,32 +355,6 @@
             this.btnTroVe.UseVisualStyleBackColor = false;
             this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(200, 143);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // btnExit1
-            // 
-            this.btnExit1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit1.BackgroundImage")));
-            this.btnExit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExit1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit1.FlatAppearance.BorderSize = 0;
-            this.btnExit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit1.Location = new System.Drawing.Point(470, 2);
-            this.btnExit1.Name = "btnExit1";
-            this.btnExit1.Size = new System.Drawing.Size(27, 25);
-            this.btnExit1.TabIndex = 38;
-            this.btnExit1.UseVisualStyleBackColor = true;
-            // 
             // BaoBieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,8 +368,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

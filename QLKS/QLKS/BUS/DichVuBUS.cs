@@ -12,6 +12,18 @@ namespace QLKS.BUS
     {
          DichVuDAO dvDAO = new DichVuDAO();
 
+        public DichVuDAO DichVuDAO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<DichVuDTO> LayDanhSachDichVu()
         {
             try

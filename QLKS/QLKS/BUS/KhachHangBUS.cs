@@ -12,6 +12,18 @@ namespace QLKS.BUS
     {
         KhachHangDAO KHDAO = new KhachHangDAO();
 
+        public KhachHangDTO KhachHangDTO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<KhachHangDTO> LayDanhSachKhachHang()
         {
             try

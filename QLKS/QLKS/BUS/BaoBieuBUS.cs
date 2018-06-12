@@ -12,6 +12,18 @@ namespace QLKS.BUS
     {
         BaoBieuDAO _dao = new BaoBieuDAO();
 
+        public BaoBieuDAO BaoBieuDAO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<BaoBieuDTO> LayDanhSachBaoBieu()
         {
             try

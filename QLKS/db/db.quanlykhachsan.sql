@@ -11,7 +11,7 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 22/05/2018 23:23:33
+ Date: 11/06/2018 15:50:55
 */
 
 SET NAMES utf8mb4;
@@ -31,10 +31,12 @@ CREATE TABLE `account_nhanvien`  (
 -- ----------------------------
 -- Records of account_nhanvien
 -- ----------------------------
-INSERT INTO `account_nhanvien` VALUES ('0', 'nhanvien2', '123');
+INSERT INTO `account_nhanvien` VALUES ('0', 'nhanvien2', '1');
 INSERT INTO `account_nhanvien` VALUES ('1', 'quanly1', '1');
 INSERT INTO `account_nhanvien` VALUES ('2', 'quanly2', '1');
-INSERT INTO `account_nhanvien` VALUES ('3', 'nhanvien1', '3423453565');
+INSERT INTO `account_nhanvien` VALUES ('3', 'nhanvien1', '1');
+INSERT INTO `account_nhanvien` VALUES ('4', 'nhanvien', '1');
+INSERT INTO `account_nhanvien` VALUES ('5', 'quanly', '1');
 
 -- ----------------------------
 -- Table structure for baobieu

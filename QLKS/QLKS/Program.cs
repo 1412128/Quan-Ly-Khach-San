@@ -17,7 +17,7 @@ namespace QLKS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QLBaoBieu());
+            Application.Run(new DangNhap());
         }
     }
 }

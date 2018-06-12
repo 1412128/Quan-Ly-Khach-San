@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QLKS.BUS.AccountBUS">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQCAAAAEAAAAAAAAABAAAAAAAAAIASABABCAAAAE=</HashCode>
+      <FileName>BUS\AccountBUS.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AccountDAO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.BUS.BaoBieuBUS">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACBAQAAAACAAAQAABAgAAAABAAAAAAAQAAAAAAE=</HashCode>
+      <FileName>BUS\BaoBieuBUS.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaoBieuDAO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.BUS.DichVuBUS">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAEAAQAAIQAQAAAAAAAAgAQAACAAE=</HashCode>
+      <FileName>BUS\DichVuBUS.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DichVuDAO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.BUS.KhachHangBUS">
+    <Position X="3.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAACAIAAIAAAAAAAAAAIAAACEAAAAAAAAAAAgAAAE=</HashCode>
+      <FileName>BUS\KhachHangBUS.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="KhachHangDTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.BUS.NhanVienBUS">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACABAAAACAAAAEAAAAAgAAAAAAAAEAAAAAhAQAE=</HashCode>
+      <FileName>BUS\NhanVienBUS.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NhanVienDAO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.BUS.PhongBUS">
+    <Position X="18.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAIACAAAAEAAAAAAGIAQABAoAAAAAAAAAAgAAAAAAE=</HashCode>
+      <FileName>BUS\PhongBUS.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PhongDAO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.DAO.AccountDAO">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAEAAAAAAAAAAAAAAAAAAAIASAAAACAAAAA=</HashCode>
+      <FileName>DAO\AccountDAO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AccountDTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.DAO.BaoBieuDAO">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAACAAAQAAAAgAAAgBAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>DAO\BaoBieuDAO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaoBieuDTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.DAO.DichVuDAO">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAEAAAAAIAAQAAAAAAAAgAQAACAAA=</HashCode>
+      <FileName>DAO\DichVuDAO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DichVuDTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.DAO.KhachHangDAO">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAIAAIAAAAAAAAAABAAACEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAO\KhachHangDAO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="KhachHangBUS" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.DAO.NhanVienDAO">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAACAAAAEAAAAAgAAAAAAAAEAAAAABAQAA=</HashCode>
+      <FileName>DAO\NhanVienDAO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NhanVienDTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.DAO.PhongDAO">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIEAAAAAAAEAAAAAAEIAQABAoAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAO\PhongDAO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PhongDTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.DBConnection">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAEAAAAAAEQBAAAABABQAAQEAAAwAAAAAQgAAAAI=</HashCode>
+      <FileName>DBConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLKS.Global">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAgAQAAoAAAAAAAAAAAAgABAAAQAAIAAAAAAA=</HashCode>
+      <FileName>Global.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLKS.DTO.AccountDTO">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABABAAAAAAIAAAAACAAACAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>DTO\AccountDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLKS.DTO.BaoBieuDTO">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAiAAAAAAAAAYAAAAAIAAAgAAEAAAAAoCAIIEAAQCAA=</HashCode>
+      <FileName>DTO\BaoBieuDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLKS.DTO.DichVuDTO">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAACBAAAAAAEAAAAAAAQAAgAAABCAAAAA=</HashCode>
+      <FileName>DTO\DichVuDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLKS.DTO.KhachHangDTO">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAQAEAQAAQAAAQAAAAAAAAgBAAAAAAACAI=</HashCode>
+      <FileName>DTO\KhachHangDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLKS.DTO.NhanVienDTO">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARgAABAAAAAAAEAAQAMAAAQAAAAAAAgABAAAAAAAAAI=</HashCode>
+      <FileName>DTO\NhanVienDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLKS.DTO.PhongDangSuDungDTO">
+    <Position X="18.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIAAAAEAAAYAAAAAAAAAAgAEAAAAAgAAIAAAAACAA=</HashCode>
+      <FileName>DTO\PhongDangSuDungDTO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PhongDAO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QLKS.DTO.PhongDTO">
+    <Position X="14.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABCAAAAAAASAIAAAAgAAAAAICAAAIAAEAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\PhongDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

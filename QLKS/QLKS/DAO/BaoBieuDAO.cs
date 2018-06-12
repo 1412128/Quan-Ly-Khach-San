@@ -8,6 +8,18 @@ namespace QLKS.DAO
 {
     public class BaoBieuDAO
     {
+        public BaoBieuDTO BaoBieuDTO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<BaoBieuDTO> LayDanhSachBaoBieu()
         {
             List<string[]> _list = new List<string[]>();

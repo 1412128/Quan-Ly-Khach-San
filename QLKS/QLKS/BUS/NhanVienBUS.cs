@@ -12,6 +12,18 @@ namespace QLKS.BUS
     {
         NhanVienDAO NvDAO = new NhanVienDAO();
 
+        public NhanVienDAO NhanVienDAO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<NhanVienDTO> LayDanhSachNhanVien()
         {
             try

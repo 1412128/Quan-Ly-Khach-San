@@ -9,6 +9,18 @@ namespace QLKS.DAO
 {
     public class PhongDAO
     {
+        public PhongDTO PhongDTO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<PhongDTO> LayDanhSachPhongTheoLoaiPhong(int _loaiPhong)
         {
             List<string[]> _list = new List<string[]>();

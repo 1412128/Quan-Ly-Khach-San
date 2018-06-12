@@ -431,6 +431,7 @@
             this.txtId.MaxLength = 32767;
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '\0';
+            this.txtId.ReadOnly = true;
             this.txtId.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtId.SelectedText = "";
             this.txtId.SelectionLength = 0;

@@ -11,7 +11,19 @@ namespace QLKS.BUS
     public class PhongBUS
     {
         PhongDAO _phongDAO = new PhongDAO();
-        
+
+        public PhongDAO PhongDAO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<PhongDTO> LayDanhSachPhong()
         {
             try

@@ -9,11 +9,23 @@ namespace QLKS.DAO
 {
     public class AccountDAO
     {
+        public AccountDTO AccountDTO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public AccountDTO getAccount(string _taiKhoan)
         {
             List<string[]> _list;
             AccountDTO _data = new AccountDTO(); ;
-            string query = string.Format("SELECT * FROM account_nhanvien WHERE TaiKhoan ={0}",_taiKhoan);
+            string query = string.Format("SELECT * FROM account_nhanvien WHERE IDTaiKhoan ={0}",_taiKhoan);
             _list = DBConnection.getInstance().Select(query);
             _data.IDTaiKhoan = _list[0][0];
             _data.TaiKhoan = _list[0][1];

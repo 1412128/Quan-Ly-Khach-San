@@ -73,8 +73,12 @@ namespace QLKS.GUI
             //Show data            
             foreach (var item in _array)
             {
-                string s = Global.Instance().ConvertCurrency(item.Gia.ToString());
-                table.Rows.Add(item.TenDichVu.ToString(), s);
+                if (item != null)
+                {
+                    string s = Global.Instance().ConvertCurrency(item.Gia.ToString());
+                    table.Rows.Add(item.TenDichVu.ToString(), s);
+                }
+               
             }
 
             return table;
@@ -88,6 +92,11 @@ namespace QLKS.GUI
                 f.Activate();
             }         
             
+        }
+
+        private void btnExit1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

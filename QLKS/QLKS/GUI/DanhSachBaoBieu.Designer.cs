@@ -125,6 +125,7 @@
             this.txtTimKiem.WaterMark = "Nhập mã số báo biểu cần tìm";
             this.txtTimKiem.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtTimKiem.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
             // 
             // panel3
             // 

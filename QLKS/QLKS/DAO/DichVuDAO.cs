@@ -8,6 +8,18 @@ namespace QLKS.DAO
 {
     public class DichVuDAO
     {
+        public DichVuDTO DichVuDTO
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public List<DichVuDTO> LayDanhSachDichVu()
         {
             List<string[]> _list = new List<string[]>();
